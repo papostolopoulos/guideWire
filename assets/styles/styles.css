@@ -1,0 +1,17 @@
+*{
+  box-sizing: border-box;
+}
+
+.businessPrimary{
+  color: rgb(255, 255, 255);
+  background-color: rgb(46, 114, 153);
+  /* border: 2px solid rgb(46, 114, 153); */
+  font-family: tahoma;
+  padding: 8px 15px;
+  font-weight: 600;
+}
+
+.businessPrimary:hover{
+  border: 2px solid rgb(255, 255, 255);
+  background-clip: padding-box;
+}
