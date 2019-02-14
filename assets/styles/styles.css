@@ -1,17 +1,260 @@
 *{
+}
+
+button{
   box-sizing: border-box;
+  font-size: 14px;
+  position: relative;
+}
+
+:root{
+
+  /* ---BUSINESS ALL (BOTH PRIMARY AND SECONDARY) */
+  --businessAll-border: 1px solid rgb(46, 114, 153);
+  --businessAll-borderRadius: 3%;
+  --businessAll-fontFamily: sans-serif;
+  /* Hover */
+  --businessAll-hover-cursor: pointer;
+  /* Disabled */
+  --businessAll-disabled-background: rgb(233, 233, 233);
+  --businessAll-disabled-border: 1px solid rgb(233, 233, 233);
+  --businessAll-disabled-color: rgb(135, 135, 135);
+/* Focus */
+  --businessAll-focus-outline: none;
+
+
+  /* ---BUSINESS PRIMARY--- */
+  --businessPrimary-background: rgb(46, 114, 153);
+  --businessPrimary-color: rgb(255, 255, 255);
+  /* Focus */
+  --businessPrimary-focus-boxShadow: inset 0 0 0 1px rgb(255, 255, 255);
+  /* Active */
+  --businessPrimary-active-background: rgb(12, 93, 127);
+  --businessPrimary-active-border: 1px solid rgb(12, 93, 127);
+
+
+
+  /* ---BUSINESS SECONDARY--- */
+  --businessSecondary-background: rgb(255, 255, 255);
+  --businessSecondary-color: rgb(46, 114, 153);
+  /* Focus */
+  --businessSecondary-focus-content: "";
+  --businessSecondary-focus-topRightBottomLeft: 1px;
+  /* Active */
+  --businessSecondary-active-background: rgb(239, 251, 255);
+  --businessSecondary-active-border: 1px solid rgb(46, 114, 153);
+
+
+
+  /* SIZES */
+  --large-padding: 8px 15px;
+  --medium-padding: 5px 15px;
+  --small-fontSize: .8em;
+
+
+
+  /* CONSUMER ALL (BOTH PRIMARY AND SECONDARY)*/
+  --consumerAll-width: 150px;
+  --consumerAll-height: 30px;
+  --consumerAll-borderRadius: 3%;
+  /* Hover */
+  --consumerAll-hover-cursor: pointer;
+  /* Focus */
+  --consumerAll-focus-outline: none;
+  --consumerAll-focus-border: 1px, solid rgb(145, 201, 225);
+
+
+  /* CONSUMER PRIMARY */
+  --consumerPrimary-background: linear-gradient(to left, rgb(20, 135, 180), rgb(15, 116, 155));
+  --consumerPrimary-border: 1px solid rgb(15, 116, 155);
+  --consumerPrimary-color: rgb(255, 255, 255);
+  /* Hover */
+  --consumerPrimary-hover-background: linear-gradient(to left, rgb(15, 116, 155), rgb(11, 97, 130));
+  --consumerPrimary-hover-border: 1px solid rgb(11, 97, 130);
+  /* Disabled */
+  --consumerPrimary-disabled-background: linear-gradient(to left, rgb(155, 207, 225), rgb(155, 199, 215));
+  --consumerPrimary-disabled-border: 1px solid rgb(155, 207, 225);
+  /* Active */
+  --consumerPrimary-active-background: linear-gradient(to left, rgb(7, 77, 104), rgb(11, 97, 130));
+  --consumerPrimary-active-border: 1px solid rgb(11, 97, 130);
+  /* Focus */
+  --consumerPrimary-focus-background: linear-gradient(to left, rgb(11, 97, 130), rgb(15, 116, 155));
+
+
+
+  /* CONSUMER SECONDARY */
+  --consumerSecondary-background: rgb(255, 255, 255);
+  --consumerSecondary-border: 1px solid rgb(15, 116, 155);
+  --consumerSecondary-color: rgb(15, 116, 155);
+  /* Hover */
+  --consumerSecondary-hover-background: linear-gradient(to left, rgb(15, 116, 155), rgb(11, 97, 130));
+  --consumerSecondary-hover-border: 1px solid rgb(11, 97, 130);
+  --consumerSecondary-hover-color: rgb(255, 255, 255);
+  /* Disabled */
+  --consumerSecondary-disabled-background: rgb(255, 255, 255);
+  --consumerSecondary-disabled-border: 1px solid rgb(155, 199, 215);
+  --consumerSecondary-disabled-color: rgb(155, 199, 215);
+  /* Active */
+  --consumerSecondary-active-background: linear-gradient(to left, rgb(11, 97, 130), rgb(7, 77, 104));
+  --consumerSecondary-active-border: 1px solid rgb(11, 97, 130);
+  /* Focus */
+  --consumerSecondary-focus-background: rgb(255, 255, 255);
+  --consumerSecondary-focus-border: 1px solid rgb(145, 201, 225);
+  --consumerSecondary-focus-boxShadow: inset 0 0 0 1px rgb(15, 116, 155);
+  --consumerSecondary-focus-color: rgb(15, 116, 155);
+}
+
+.testMe{
+  border: 1px solid rgb(46, 114, 153);
+  border-radius: 5%;
+  color: rgb(46, 114, 153);
+}
+
+.testMe:before {
+  content: " ";
+  position: absolute;
+  /* z-index: -1; */
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  border: 1px solid red;
 }
 
 .businessPrimary{
-  color: rgb(255, 255, 255);
-  background-color: rgb(46, 114, 153);
-  /* border: 2px solid rgb(46, 114, 153); */
-  font-family: tahoma;
-  padding: 8px 15px;
-  font-weight: 600;
+  background-color: var(--businessPrimary-background);
+  border: var(--businessAll-border);
+  color: var(--businessPrimary-color);
 }
 
-.businessPrimary:hover{
-  border: 2px solid rgb(255, 255, 255);
-  background-clip: padding-box;
+.businessSecondary{
+  background-color: var(--businessSecondary-background);
+  border: var(--businessAll-border);
+  color: var(--businessSecondary-color);
+}
+
+
+.businessPrimary, .businessSecondary{
+  border-radius: var(--businessAll-borderRadius);
+  font-family: var(--businessAll-fontFamily);
+}
+
+.businessPrimary:hover, .businessSecondary:hover{
+  cursor: var(--businessAll-hover-cursor);
+}
+
+
+.businessPrimary:focus, .businessSecondary:focus{
+  box-shadow: var(--businessPrimary-focus-boxShadow);
+  outline: var(--businessAll-focus-outline);
+}
+
+.businessPrimary:active{
+  background-color: var(--businessPrimary-active-background);
+  border: var(--businessPrimary-active-border);
+}
+
+
+.businessSecondary:active{
+  background-color: var(--businessSecondary-active-background);
+  border: var(--businessSecondary-active-border);
+}
+
+.businessSecondary:focus:before{
+  border: var(--businessAll-border);
+  border-radius: var(--businessAll-borderRadius);
+  content: var(--businessSecondary-focus-content);
+  position: absolute;
+  top: var(--businessSecondary-focus-topRightBottomLeft);
+  left: var(--businessSecondary-focus-topRightBottomLeft);
+  right: var(--businessSecondary-focus-topRightBottomLeft);
+  bottom: var(--businessSecondary-focus-topRightBottomLeft);
+}
+
+.large{
+  padding: var(--large-padding);
+}
+
+.medium{
+  padding: var(--medium-padding);
+}
+
+.small{
+  font-size: var(--small-fontSize);
+}
+
+.businessPrimary:disabled, .businessSecondary:disabled{
+  background-color: var(--businessAll-disabled-background);
+  border: 1px solid var(--businessAll-disabled-border);
+  color: var(--businessAll-disabled-color);
+}
+
+.consumerPrimary, .consumerSecondary{
+  height: var(--consumerAll-height);
+  width: var(--consumerAll-width);
+  border-radius: var(--consumerAll-borderRadius);
+}
+
+.consumerPrimary{
+  background: var(--consumerPrimary-background);
+  border: var(--consumerPrimary-border);
+  color: var(--consumerPrimary-color);
+}
+
+.consumerSecondary{
+  background: var(--consumerSecondary-background);
+  border: var(--consumerSecondary-border);
+  color: var(--consumerSecondary-color);
+}
+
+.consumerPrimary:hover, .consumerSecondary:hover{
+  cursor: var(--consumerAll-hover-cursor);
+}
+
+.consumerPrimary:hover{
+  background: var(--consumerPrimary-hover-background);
+  border: var(--consumerPrimary-hover-border);
+}
+
+.consumerSecondary:hover{
+  background: var(--consumerSecondary-hover-background);
+  border: var(--consumerSecondary-hover-border);
+  color: var(--consumerSecondary-hover-color);
+}
+
+.consumerPrimary:disabled{
+  background: var(--consumerPrimary-disabled-background);
+  border: var(--consumerPrimary-disabled-border);
+}
+
+.consumerSecondary:disabled{
+  background: var(--consumerSecondary-disabled-background);
+  border: var(--consumerSecondary-disabled-border);
+  color: var(--consumerSecondary-disabled-color);
+}
+
+.consumerPrimary:active{
+  background: var(--consumerPrimary-active-background);
+  border: var(--consumerPrimary-active-border);
+}
+
+.consumerSecondary:active{
+  background: var(--consumerSecondary-active-background);
+  border: var(--consumerSecondary-active-border);
+}
+
+.consumerPrimary:focus, .consumerSecondary:focus{
+  outline: var(--consumerAll-focus-outline);
+  border: var(--consumerAll-focus-border);
+}
+
+.consumerPrimary:focus{
+  background: var(--consumerPrimary-focus-background);
+}
+
+.consumerSecondary:focus{
+  background: var(--consumerSecondary-focus-background);
+  border: var(--consumerSecondary-focus-border);
+  box-shadow: var(--consumerSecondary-focus-boxShadow);
+  color: var(--consumerSecondary-focus-color);
 }
