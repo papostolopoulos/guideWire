@@ -1,0 +1,67 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  font-family: sans-serif;
+}
+
+#divContainer{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+main{
+  border: 2px solid rgb(46, 114, 153);
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-areas:
+  "sectionSelectionsArea sectionButtonArea sectionButtonArea sectionButtonArea"
+  "sectionSelectionsArea sectionCodeArea sectionCodeArea sectionCodeArea"
+  "sectionSelectionsArea sectionCodeArea sectionCodeArea sectionCodeArea"
+  "sectionSelectionsArea sectionCodeArea sectionCodeArea sectionCodeArea";
+  height: 98vh;
+  justify-content: center;
+  margin: auto;
+  padding: 5px;
+  width: 98vw;
+}
+
+.sectionSelectionsArea{
+  background: rgb(239, 251, 255);
+  display: flex;
+  flex-direction: column;
+  grid-area: sectionSelectionsArea;
+  justify-content: space-evenly;
+  padding: 10% 5px;
+  font-size: 90%;
+}
+
+.sectionButtonArea{
+  grid-area: sectionButtonArea;
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  align-self: center;
+}
+
+.sectionCodeArea{
+  grid-area: sectionCodeArea;
+  overflow: scroll;
+  height: 100%;
+  white-space: pre-wrap;
+  font-size: 70%;
+  background: rgb(46, 114, 153);
+  color: rgb(255, 255, 255);
+  font-family: verdana;
+}
+
+article{
+
+}
